@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Последние фильмы{% endblock %}
+
+{% block content %}
+
+    {% if latest_movies_list %}
+
+        {% for movie in latest_movies_list %}
+            <a href="{% url 'movies:detail' movie.id %}">{{movie.title}}</a>
+        {% endfor %}
+
+    {% else %}
+        Фильмов не найдено
+    {% endif %}
+
+
+{% endblock %}

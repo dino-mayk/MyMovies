@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{{movie.title}}{% endblock %}
+
+{% block content %}
+
+    <h2>{{movie.title}}</h2>
+
+    <p>{{movie.text}}</p>
+
+    <em>{{movie.pub_date}}</em>
+
+    <hr>
+
+
+    <hr>
+
+    <form action="{% url 'movies:comment' movie.id %}" method="post">
+        
+        {% csrf_token %}
+
+        <input type="text" required placeholder="Ваше имя" name="name"><br>
+        <textarea name="text" required="" placeholder="коммент" cols="30" rows="10"></textarea><br>
+
+        <button type="submit">Оставить коммент</button>
+
+
+    </form>
+
+{% endblock %}
