@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'movies/css/index.css' %}">
+
+<main>
+        <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'movies/img/for karousel.svg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'movies/img/for karousel2.svg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'movies/img/for karousel3.svg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="p-5">
+  <div class="d-flex justify-content-around">
+  
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <a href=""><img src="{% static 'movies/img/card-img.svg' %}" class="card-img-top" alt="..."></a>
+    </div>
+  </div>
+  
+  <div class="card text-center" style="width: 18rem;">
+    <div class="card-body">
+      <a href=""><img src="{% static 'movies/img/card-img2.svg' %}" class="card-img-top" alt="..."></a>
+    </div>
+  </div>
+  
+  <div class="card text-end" style="width: 18rem;">
+    <div class="card-body">
+      <a href=""><img src="{% static 'movies/img/card-img3.svg' %}" class="card-img-top" alt="..."></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</main>
+{% endblock %}
